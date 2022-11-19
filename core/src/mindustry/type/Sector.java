@@ -69,7 +69,9 @@ public class Sector{
     public String displayThreat(){
         float step = 0.25f;
         String color = Tmp.c1.set(Color.white).lerp(Color.scarlet, Mathf.round(threat, step)).toString();
-        String[] threats = {"low", "medium", "high", "extreme", "eradication"};
+        String[] threats = {"low", "medium", "high", "extreme", "eradication","difficulty6","difficulty7",
+        "difficulty8","difficulty9","difficulty10","difficulty11","difficulty12","difficulty13","difficulty14",
+                "difficulty15","difficulty16","difficulty17","difficulty18","difficulty19","difficulty20"};
         int index = Math.min((int)(threat / step), threats.length - 1);
         return "[#" + color + "]" + Core.bundle.get("threat." + threats[index]);
     }
