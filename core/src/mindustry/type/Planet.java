@@ -279,7 +279,7 @@ public class Planet extends UnlockableContent{
                 sum += 0.88f;
             }
 
-            sector.threat = sector.preset == null ? Math.min(sum / 5f, 1.2f) : Mathf.clamp(sector.preset.difficulty / 10f);
+    sector.threat = sector.preset == null ? Math.min(sum / 5f, 1.2f) : Mathf.clamp(sector.preset.difficulty / 10f,0,100);
         }
     }
 
